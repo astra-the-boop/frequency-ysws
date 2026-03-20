@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'MatrixType';
+    src: url('./assets/MatrixType Display/MatrixTypeDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'MatrixType';
+    src: url('./assets/MatrixType Display/MatrixTypeDisplay-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 html, body {
     height: 100%;
 }
@@ -28,9 +42,17 @@ body{
 #screen{
     background-color: darkolivegreen;
     width: 38vw;
-    height: 15vw;
+    height: 32vw;
     position: absolute;
     left: 50%;
     transform: translate(-51%);
-    top: 17rem;
+    top: 20vw;
+    text-align: center;
+}
+
+.matrixtype{
+    font-family: MatrixType, monospace;
+    font-weight: normal;
+    font-size: 3rem
+    /*font-weight: bold;*/
 }
