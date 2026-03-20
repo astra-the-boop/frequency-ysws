@@ -40,19 +40,18 @@ body{
 }
 
 #screen{
-    background-color: darkolivegreen;
+    background-color: #A8C64E;
     width: 38vw;
     height: 32vw;
     position: absolute;
     left: 50%;
     transform: translate(-51%);
     top: 20vw;
-    text-align: center;
 }
 
-.matrixtype{
-    font-family: MatrixType, monospace;
-    font-weight: normal;
-    font-size: 3rem
-    /*font-weight: bold;*/
+#frequency-logo{
+    width: 20vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
 }
+
