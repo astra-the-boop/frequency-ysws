@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(80deg,rgba(41, 56, 79, 1) 0%, rgba(33, 28, 36, 1) 100%);
+}
+
+#flag{
+    width: 10rem;
+    margin-top: 1rem;
+    position: absolute;
+}
