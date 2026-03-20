@@ -8,6 +8,7 @@ body{
 }
 
 #flag{
+    z-index: 100;
     width: 10rem;
     margin-top: 1rem;
     position: absolute;
@@ -17,4 +18,19 @@ body{
     width: 60vw;
     image-rendering: pixelated;
     position: absolute;
+
+    left: 50%;
+    transform: translate(-50%);
+
+    pointer-events: none;
+}
+
+#screen{
+    background-color: darkolivegreen;
+    width: 38vw;
+    height: 15vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-51%);
+    top: 17rem;
 }
