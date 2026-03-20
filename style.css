@@ -12,3 +12,9 @@ body{
     margin-top: 1rem;
     position: absolute;
 }
+
+#radio{
+    width: 60vw;
+    image-rendering: pixelated;
+    position: absolute;
+}
