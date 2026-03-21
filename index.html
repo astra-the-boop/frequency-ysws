@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Frequency</title>
     <base href="/frequency">
+    <script>
+        const base = document.createElement('base');
+        base.href= window.location.pathname.replace("/\/[^/]*$/", "/");
+        document.currentScript.before(base);
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
