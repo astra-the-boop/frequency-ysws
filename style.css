@@ -54,14 +54,43 @@ body{
 #a{
     display: flex;
     text-align: center;
+    column-gap: 1vw;
+    padding: 1vw
 }
 
 #frequency-logo{
     width: 20vw;
-    margin-top: 2vw;
+    margin-top: 0;
     margin-left: 1vw;
 }
 
 #subtitle{
-    margin: 3vw
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+#ys-scroll{
+    width: 100%;
+    overflow: hidden;
+    font-size: 1.2vw;
+    color: #3c412c;
+    position: relative;
+    white-space: nowrap;
+    margin-top: 1vw;
+}
+
+#ys-scroll span, #ws-scroll span{
+    display: inline-block;
+    position: relative
+}
+
+#ws-scroll{
+    width: 100%;
+    overflow:hidden;
+    font-size: 1.2vw;
+    color: #3c412c;
+    position: relative;
+    white-space: nowrap;
+    display: block;
+    margin-top: 0.5vw;
 }

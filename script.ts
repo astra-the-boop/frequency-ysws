@@ -1,0 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const el:HTMLDivElement = document.getElementById('ys-scroll') as HTMLDivElement;
+    const text:string = el.innerHTML;
+    el.innerHTML = `<span>${text}${text}</span>`;
+    const inner:HTMLSpanElement = el.querySelector('span');
+    let pos:number = 0;
+    const step:number = 4;
+    const interval:number = 50;
+
+    const el2:HTMLDivElement = document.getElementById('ws-scroll') as HTMLDivElement;
+    const text2:string = el2.innerText;
+    el2.innerHTML = `<span>${text2}${text2}</span>`;
+    const inner2:HTMLSpanElement = el2.querySelector("span");
+    let pos2:number = -(inner2.scrollWidth / 2);
+
+    setInterval(() => {
+        pos -= step;
+        const resetAt = inner.scrollWidth / 2;
+        if(Math.abs(pos) >= resetAt) pos = 0;
+        inner.style.transform = `translateX(${pos}px)`;
+
+        pos2 += step;
+        const resetAt2 = inner2.scrollWidth / 2;
+        if(pos2 >= resetAt2) pos2 = -resetAt2;
+        inner2.style.transform = `translateX(${pos2}px)`;
+    }, interval)
+})
