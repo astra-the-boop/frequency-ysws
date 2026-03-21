@@ -47,11 +47,21 @@ body{
     left: 50%;
     transform: translate(-51%);
     top: 20vw;
+    font-family: 'MatrixType', monospace;
+    display: inline-block;
+}
+
+#a{
+    display: flex;
+    text-align: center;
 }
 
 #frequency-logo{
     width: 20vw;
     margin-top: 2vw;
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
+#subtitle{
+    margin: 3vw
+}
