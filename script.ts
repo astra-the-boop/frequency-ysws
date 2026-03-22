@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         pos2 += step;
         const resetAt2 = inner2.scrollWidth / 2;
-        if(pos2 >= resetAt2) pos2 = -resetAt2;
+        if(pos2 >= 0) pos2 = -resetAt2;
+        console.log(pos2);
         inner2.style.transform = `translateX(${pos2}px)`;
     }, interval)
 })
