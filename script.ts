@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.style.display = "none";
         });
         screen.style.display = "block";
-
     });
 
 
