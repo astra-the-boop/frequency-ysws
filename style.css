@@ -37,6 +37,8 @@ body{
     transform: translate(-50%);
 
     pointer-events: none;
+
+    transition: width 0.2s ease-out, margin-top 0.2s ease-out;
 }
 
 #screen{
@@ -67,6 +69,7 @@ body{
 #subtitle{
     margin: 0;
     font-size: 1.3rem;
+    color: #3c412c;
 }
 
 #ys-scroll{
@@ -76,7 +79,7 @@ body{
     color: #3c412c;
     position: relative;
     white-space: nowrap;
-    margin-top: 1vw;
+    margin-top: 2vw;
 }
 
 #ys-scroll span, #ws-scroll span{
@@ -93,4 +96,31 @@ body{
     white-space: nowrap;
     display: block;
     margin-top: 0.5vw;
+}
+
+#tune-in{
+    all: unset;
+    margin-top: 3vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: crosshair;
+    border: 2px solid #3c412c;
+    padding: 1vw 2vw
+}
+
+#tune-in:hover{
+    background-color: #3c412c;
+    color: #a8c64e
+}
+
+#tune-in:active{
+    background-color: #a8c64e;
+    color: #3c412c;
+    cursor: help;
+}
+
+#radio.expanded{
+    width: 165vw;
+    margin-top: -80vw;
 }
