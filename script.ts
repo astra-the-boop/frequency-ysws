@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const screen:HTMLDivElement = document.getElementById("screen") as HTMLDivElement;
     const screenElements:NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>(".startDisplay") as NodeListOf<HTMLElement>;
     tuneInBtn.addEventListener('click', async () => {
+        radioFrame.classList.add("expanded");
+        screen.classList.add("animate");
+
         setTimeout(() => {
             radioFrame.style.display = "none";
         }, 150);
-        radioFrame.classList.add("expanded");
         screenElements.forEach(e => {
             e.style.display = "none";
         });

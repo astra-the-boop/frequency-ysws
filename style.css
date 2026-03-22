@@ -51,6 +51,7 @@ body{
     top: 20vw;
     font-family: 'MatrixType', monospace;
     display: inline-block;
+    transition: width 0.2s ease-out, height 0.2s ease-out, top 0.2s ease-out;
 }
 
 #a{
@@ -123,4 +124,19 @@ body{
 #radio.expanded{
     width: 165vw;
     margin-top: -80vw;
+}
+
+@keyframes screenRefresh{
+    0% {background-color: #3c412c;}
+    5% {background-color: #3c412c;}
+    90% {background-color: #a8c64e;}
+    100% {background-color: #a8c64e;}
+}
+
+#screen.animate{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: #3c412c;
+    animation: screenRefresh 0.2s forwards;
 }
