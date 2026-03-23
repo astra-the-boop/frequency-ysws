@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const radioFrame = document.getElementById("radio");
     const screen = document.getElementById("screen");
     const screenElements = document.querySelectorAll(".startDisplay");
+    const main = document.getElementById("mainContainer");
     tuneInBtn.addEventListener('click', () => __awaiter(void 0, void 0, void 0, function* () {
         radioFrame.classList.add("expanded");
         screen.classList.add("animate");
@@ -23,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.style.display = "none";
         });
         screen.style.display = "block";
+        main.style.display = "flex";
+        main.style.opacity = "1";
     }));
     const el = document.getElementById('ys-scroll');
     const text = el.innerHTML;

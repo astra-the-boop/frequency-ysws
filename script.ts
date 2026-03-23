@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const radioFrame:HTMLImageElement = document.getElementById("radio") as HTMLImageElement;
     const screen:HTMLDivElement = document.getElementById("screen") as HTMLDivElement;
     const screenElements:NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>(".startDisplay") as NodeListOf<HTMLElement>;
+    const main:HTMLDivElement = document.getElementById("mainContainer") as HTMLDivElement;
     tuneInBtn.addEventListener('click', async () => {
         radioFrame.classList.add("expanded");
         screen.classList.add("animate");
@@ -14,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.style.display = "none";
         });
         screen.style.display = "block";
+
+        main.style.display = "flex";
+        main.style.opacity = "1";
     });
 
 
