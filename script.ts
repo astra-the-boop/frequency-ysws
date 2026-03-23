@@ -52,8 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         location.reload()
     });
 
+    const icon:HTMLImageElement = document.getElementById("icon") as HTMLImageElement;
+
     const button2:HTMLButtonElement = document.getElementById("2") as HTMLButtonElement;
     button2.addEventListener("click", ()=>{
+        icon.src = "./assets/faq.svg";
         main2.innerHTML = `<h2>What is Frequency?</h2><p>
                     Frequency is an online event by <a href="https://hackclub.com">Hack Club</a> where you build any project using radio technologies, and we'll send you the resources to build it!
                 </p>
@@ -70,11 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const button3:HTMLButtonElement = document.getElementById("3") as HTMLButtonElement;
     button3.addEventListener("click", ()=>{
+        icon.src = "./assets/guides.svg";
         main2.innerHTML = `<h1>More to come soon!</h1>`
     });
 
     const button4:HTMLButtonElement = document.getElementById("4") as HTMLButtonElement;
     button4.addEventListener("click", ()=>{
+        icon.src = "./assets/shop.svg";
         main2.innerHTML = `<h1>More to come soon!</h1>`
     });
 
