@@ -46,4 +46,40 @@ document.addEventListener('DOMContentLoaded', () => {
         if(pos2 >= 0) pos2 = -resetAt2;
         inner2.style.transform = `translateX(${pos2}px)`;
     }, interval)
+    const main2:HTMLDivElement = document.getElementById('main2') as HTMLDivElement;
+    const button1:HTMLButtonElement = document.getElementById("1") as HTMLButtonElement;
+    button1.addEventListener("click", ()=>{
+        location.reload()
+    });
+
+    const button2:HTMLButtonElement = document.getElementById("2") as HTMLButtonElement;
+    button2.addEventListener("click", ()=>{
+        main2.innerHTML = `<h2>What is Frequency?</h2><p>
+                    Frequency is an online event by <a href="https://hackclub.com">Hack Club</a> where you build any project using radio technologies, and we'll send you the resources to build it!
+                </p>
+                    <h2>What counts as radio technology?</h2><p>
+                    Anything that emits and receives <a href="https://en.wikipedia.org/wiki/Radio_wave">radio waves</a>, whether it be LoRa, NFC, RFID, 4333MHz, WiFi, or something else.
+                </p>
+                    <h2>What is Hack Club?</h2>
+                    <p>Hack Club is a 501(c)(3) nonprofit organization based in the U.S. aimed at supporting teenagers develop their skills. We have organized events such as <a href="https://highseas.hackclub.com">High Seas</a> and <a href="https://shipwrecked.hackclub.com">Shipwrecked</a> in the past. You can see more of what we do at <a href="https://hackclub.com">hackclub.com</a></p>
+                    <h2>Who can participate?</h2>
+                    <p>Anyone between ages 13-18 can participate no matter their skill level!</p>
+                    <h2>I have more questions!</h2>
+                    <p>Join <a href="https://slack.hackclub.com/">Hack Club's Slack</a> and join <a href="https://hackclub.enterprise.slack.com/archives/C0AMZARAJ0H">#frequency</a></p>`
+    });
+
+    const button3:HTMLButtonElement = document.getElementById("3") as HTMLButtonElement;
+    button3.addEventListener("click", ()=>{
+        main2.innerHTML = `<h1>More to come soon!</h1>`
+    });
+
+    const button4:HTMLButtonElement = document.getElementById("4") as HTMLButtonElement;
+    button4.addEventListener("click", ()=>{
+        main2.innerHTML = `<h1>More to come soon!</h1>`
+    });
+
+    const button5:HTMLButtonElement = document.getElementById("5") as HTMLButtonElement;
+    button5.addEventListener("click", ()=>{
+        window.open('https://forms.fillout.com/t/1afuNL8hfXus', '_blank');
+    });
 })
