@@ -29,6 +29,7 @@ body{
 }
 
 #radio{
+    z-index: 5;
     width: 60vw;
     image-rendering: pixelated;
     position: absolute;
@@ -42,6 +43,7 @@ body{
 }
 
 #screen{
+    z-index: 0;
     background-color: #A8C64E;
     width: 38vw;
     height: 32vw;
