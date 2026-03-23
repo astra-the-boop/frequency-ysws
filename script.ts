@@ -1,3 +1,5 @@
+alert("The following page may not be suited for those sensitive to flashing lights.");
+
 document.addEventListener('DOMContentLoaded', () => {
     const tuneInBtn:HTMLButtonElement = document.getElementById("tune-in") as HTMLButtonElement;
     const radioFrame:HTMLImageElement = document.getElementById("radio") as HTMLImageElement;
