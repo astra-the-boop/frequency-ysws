@@ -305,16 +305,17 @@ button:active{
 #email{
     all:unset;
     border: 1px solid #3c412c;
-    height: 5vh;
+    /*height: 5vh;*/
     width: 15vw;
     margin-top: -3vh;
-    padding-left: 1rem
+    padding: 1rem 2vw;
+    font-size: 1rem;
 }
 
 #rsvp{
     width: auto;
-    padding: 0.5vw 2vw;
-    font-size: 1.2rem;
+    padding: 1rem 2vw;
+    font-size: 1rem;
 }
 
 #signup-container{

@@ -94,13 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <button id="rsvp">RSVP</button>
         </div>
         `
-    });
 
-    const rsvpBtn:HTMLButtonElement = document.getElementById("rsvp") as HTMLButtonElement;
-    const rsvpEmail:HTMLInputElement = document.getElementById("email") as HTMLInputElement;
+        const rsvpBtn:HTMLButtonElement = document.getElementById("rsvp") as HTMLButtonElement;
+        const rsvpEmail:HTMLInputElement = document.getElementById("email") as HTMLInputElement;
 
-    rsvpBtn.addEventListener("click", ()=>{
-        const emailIn:string = rsvpEmail.value;
-        window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
+        rsvpBtn.addEventListener("click", ()=>{
+            const emailIn:string = rsvpEmail.value;
+            window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
+        });
     });
 })

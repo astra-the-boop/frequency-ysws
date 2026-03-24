@@ -93,11 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <button id="rsvp">RSVP</button>
         </div>
         `;
-    });
-    const rsvpBtn = document.getElementById("rsvp");
-    const rsvpEmail = document.getElementById("email");
-    rsvpBtn.addEventListener("click", () => {
-        const emailIn = rsvpEmail.value;
-        window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
+        const rsvpBtn = document.getElementById("rsvp");
+        const rsvpEmail = document.getElementById("email");
+        rsvpBtn.addEventListener("click", () => {
+            const emailIn = rsvpEmail.value;
+            window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
+        });
     });
 });
