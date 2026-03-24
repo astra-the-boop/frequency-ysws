@@ -87,6 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const button5:HTMLButtonElement = document.getElementById("5") as HTMLButtonElement;
     button5.addEventListener("click", ()=>{
-        window.open('https://forms.fillout.com/t/1afuNL8hfXus', '_blank');
+        icon.src="./assets/signup.svg";
+        main2.innerHTML = `
+        <div id="signup-container">
+            <input id="email" placeholder="Email address">
+            <button id="rsvp">RSVP</button>
+        </div>
+        `
+    });
+
+    const rsvpBtn:HTMLButtonElement = document.getElementById("rsvp") as HTMLButtonElement;
+    const rsvpEmail:HTMLInputElement = document.getElementById("email") as HTMLInputElement;
+
+    rsvpBtn.addEventListener("click", ()=>{
+        const emailIn:string = rsvpEmail.value;
+        window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
     });
 })

@@ -301,3 +301,26 @@ button:active{
     margin-top: 1rem;
     overflow: scroll;
 }
+
+#email{
+    all:unset;
+    border: 1px solid #3c412c;
+    height: 5vh;
+    width: 15vw;
+    margin-top: -3vh;
+    padding-left: 1rem
+}
+
+#rsvp{
+    width: auto;
+    padding: 0.5vw 2vw;
+    font-size: 1.2rem;
+}
+
+#signup-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 15vh;
+}
