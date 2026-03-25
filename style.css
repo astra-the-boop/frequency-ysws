@@ -306,16 +306,16 @@ button:active{
     all:unset;
     border: 1px solid #3c412c;
     /*height: 5vh;*/
-    width: 15vw;
+    width: 30vw;
     margin-top: -3vh;
     padding: 1rem 2vw;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 #rsvp{
     width: auto;
-    padding: 1rem 2vw;
-    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
 }
 
 #signup-container{
@@ -329,4 +329,13 @@ button:active{
 .highlighted{
     background-color: #3c412c;
     color: #a8c64e;
+}
+
+#emailVal{
+    color: #3c412c;
+    margin-left: 8vw;
+}
+
+.hidden{
+    display: none;
 }

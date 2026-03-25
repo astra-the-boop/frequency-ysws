@@ -9,6 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 alert("The following page may not be suited for those sensitive to flashing lights.");
+function validateEmail(input) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(input);
+}
 document.addEventListener('DOMContentLoaded', () => {
     const tuneInBtn = document.getElementById("tune-in");
     const radioFrame = document.getElementById("radio");
@@ -101,13 +105,25 @@ document.addEventListener('DOMContentLoaded', () => {
     button5.addEventListener("click", () => {
         icon.src = "./assets/signup.svg";
         main2.innerHTML = `
+        
         <div id="signup-container">
             <input id="email" placeholder="Email address">
             <button id="rsvp">RSVP</button>
         </div>
+        <p id="emailVal" class="hidden">Please enter a valid email address.</p>
         `;
         const rsvpBtn = document.getElementById("rsvp");
         const rsvpEmail = document.getElementById("email");
+        const emailValid = document.getElementById("emailVal");
+        rsvpEmail.addEventListener("change", () => {
+            console.log("test");
+            if (!validateEmail(rsvpEmail.value)) {
+                emailValid.classList.remove("hidden");
+            }
+            else {
+                emailValid.classList.add("hidden");
+            }
+        });
         rsvpBtn.addEventListener("click", () => {
             const emailIn = rsvpEmail.value;
             window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
