@@ -54,6 +54,7 @@ body{
     font-family: 'MatrixType', monospace;
     display: inline-block;
     transition: width 0.2s ease-out, height 0.2s ease-out, top 0.2s ease-out;
+    overflow: scroll;
 }
 
 #a{
