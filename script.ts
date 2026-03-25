@@ -50,13 +50,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, interval)
     const main2:HTMLDivElement = document.getElementById('main2') as HTMLDivElement;
     const button1:HTMLButtonElement = document.getElementById("1") as HTMLButtonElement;
+    const button2:HTMLButtonElement = document.getElementById("2") as HTMLButtonElement;
+    const button3:HTMLButtonElement = document.getElementById("3") as HTMLButtonElement;
+    const button4:HTMLButtonElement = document.getElementById("4") as HTMLButtonElement;
+    const button5:HTMLButtonElement = document.getElementById("5") as HTMLButtonElement;
+
+    function resetSidebarBtns(){
+        button1.classList.remove("highlighted");
+        button2.classList.remove("highlighted");
+        button3.classList.remove("highlighted");
+        button4.classList.remove("highlighted");
+        button5.classList.remove("highlighted");
+    }
     button1.addEventListener("click", ()=>{
         location.reload()
     });
 
     const icon:HTMLImageElement = document.getElementById("icon") as HTMLImageElement;
 
-    const button2:HTMLButtonElement = document.getElementById("2") as HTMLButtonElement;
     button2.addEventListener("click", ()=>{
         icon.src = "./assets/faq.svg";
         main2.innerHTML = `<h2>What is Frequency?</h2><p>
@@ -70,22 +81,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>Who can participate?</h2>
                     <p>Anyone between ages 13-18 can participate no matter their skill level!</p>
                     <h2>I have more questions!</h2>
-                    <p>Join <a href="https://slack.hackclub.com/">Hack Club's Slack</a> and join <a href="https://hackclub.enterprise.slack.com/archives/C0AMZARAJ0H">#frequency</a></p>`
+                    <p>Join <a href="https://slack.hackclub.com/">Hack Club's Slack</a> and join <a href="https://hackclub.enterprise.slack.com/archives/C0AMZARAJ0H">#frequency</a></p>`;
+        resetSidebarBtns();
+        button2.classList.add("highlighted");
     });
 
-    const button3:HTMLButtonElement = document.getElementById("3") as HTMLButtonElement;
+
     button3.addEventListener("click", ()=>{
         icon.src = "./assets/guides.svg";
-        main2.innerHTML = `<h1>More to come soon!</h1>`
+        main2.innerHTML = `<h1>More to come soon!</h1>`;
+        resetSidebarBtns();
+        button3.classList.add("highlighted");
     });
 
-    const button4:HTMLButtonElement = document.getElementById("4") as HTMLButtonElement;
+
     button4.addEventListener("click", ()=>{
         icon.src = "./assets/shop.svg";
         main2.innerHTML = `<h1>More to come soon!</h1>`
+        resetSidebarBtns();
+        button4.classList.add("highlighted");
     });
 
-    const button5:HTMLButtonElement = document.getElementById("5") as HTMLButtonElement;
+
     button5.addEventListener("click", ()=>{
         icon.src="./assets/signup.svg";
         main2.innerHTML = `
@@ -102,5 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailIn:string = rsvpEmail.value;
             window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
         });
+        resetSidebarBtns();
+        button5.classList.add("highlighted");
     });
 })

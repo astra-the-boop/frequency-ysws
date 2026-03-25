@@ -325,3 +325,8 @@ button:active{
     gap: 0.5rem;
     margin-top: 15vh;
 }
+
+.highlighted{
+    background-color: #3c412c;
+    color: #a8c64e;
+}

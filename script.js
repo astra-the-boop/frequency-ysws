@@ -54,11 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }, interval);
     const main2 = document.getElementById('main2');
     const button1 = document.getElementById("1");
+    const button2 = document.getElementById("2");
+    const button3 = document.getElementById("3");
+    const button4 = document.getElementById("4");
+    const button5 = document.getElementById("5");
+    function resetSidebarBtns() {
+        button1.classList.remove("highlighted");
+        button2.classList.remove("highlighted");
+        button3.classList.remove("highlighted");
+        button4.classList.remove("highlighted");
+        button5.classList.remove("highlighted");
+    }
     button1.addEventListener("click", () => {
         location.reload();
     });
     const icon = document.getElementById("icon");
-    const button2 = document.getElementById("2");
     button2.addEventListener("click", () => {
         icon.src = "./assets/faq.svg";
         main2.innerHTML = `<h2>What is Frequency?</h2><p>
@@ -73,18 +83,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>Anyone between ages 13-18 can participate no matter their skill level!</p>
                     <h2>I have more questions!</h2>
                     <p>Join <a href="https://slack.hackclub.com/">Hack Club's Slack</a> and join <a href="https://hackclub.enterprise.slack.com/archives/C0AMZARAJ0H">#frequency</a></p>`;
+        resetSidebarBtns();
+        button2.classList.add("highlighted");
     });
-    const button3 = document.getElementById("3");
     button3.addEventListener("click", () => {
         icon.src = "./assets/guides.svg";
         main2.innerHTML = `<h1>More to come soon!</h1>`;
+        resetSidebarBtns();
+        button3.classList.add("highlighted");
     });
-    const button4 = document.getElementById("4");
     button4.addEventListener("click", () => {
         icon.src = "./assets/shop.svg";
         main2.innerHTML = `<h1>More to come soon!</h1>`;
+        resetSidebarBtns();
+        button4.classList.add("highlighted");
     });
-    const button5 = document.getElementById("5");
     button5.addEventListener("click", () => {
         icon.src = "./assets/signup.svg";
         main2.innerHTML = `
@@ -99,5 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailIn = rsvpEmail.value;
             window.open(`https://forms.fillout.com/t/1afuNL8hfXus?email=${emailIn}`);
         });
+        resetSidebarBtns();
+        button5.classList.add("highlighted");
     });
 });
