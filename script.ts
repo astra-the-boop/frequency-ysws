@@ -1,3 +1,31 @@
+const shopItems:Record<string, any> =
+    {
+        "Pile of Stickers":
+            {
+                "Price":"TBA",
+                "Description":"gotta collect 'em all!",
+                "image":"/assets/shop-items/orpheus-skateboarding-PCB.png"
+            },
+        "Arduino Nano":
+            {
+                "Price":"TBA",
+                "Description":"a microcontroller half the size of your palm",
+                "image":"/assets/shop-items/arduino-nano.png",
+            },
+        "Arduino Uno":
+            {
+                "Price":"TBA",
+                "Description":"that's 1 in italian!",
+                "image":"/assets/shop-items/arduino-uno.png",
+            },
+        "Raspberry Pi Zero 2 W":
+            {
+                "Price":"TBA",
+                "Description":"π×0×2=",
+                "image":",
+            }
+    }
+
 function validateEmail(input:string):boolean{
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(input);
