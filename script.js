@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailValid = document.getElementById("emailVal");
         rsvpEmail.addEventListener("input", () => {
             console.log("test");
-            if (!validateEmail(rsvpEmail.value)) {
+            if (!validateEmail(rsvpEmail.value) && rsvpEmail.value) {
                 emailValid.classList.remove("hidden");
             }
             else {
