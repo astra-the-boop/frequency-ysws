@@ -1,5 +1,3 @@
-alert("The following page may not be suited for those sensitive to flashing lights.");
-
 function validateEmail(input:string):boolean{
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(input);
