@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rsvpBtn = document.getElementById("rsvp");
         const rsvpEmail = document.getElementById("email");
         const emailValid = document.getElementById("emailVal");
-        rsvpEmail.addEventListener("change", () => {
+        rsvpEmail.addEventListener("input", () => {
             console.log("test");
             if (!validateEmail(rsvpEmail.value)) {
                 emailValid.classList.remove("hidden");
@@ -130,5 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         resetSidebarBtns();
         button5.classList.add("highlighted");
+    });
+    const flickerBtn = document.getElementById("flicker");
+    flickerBtn.addEventListener("click", () => {
+        if (flickerBtn.classList.contains("selected")) {
+            flickerBtn.classList.remove("selected");
+            screen.classList.add("crt");
+        }
+        else {
+            flickerBtn.classList.add("selected");
+            screen.classList.remove("crt");
+        }
     });
 });

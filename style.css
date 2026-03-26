@@ -352,5 +352,12 @@ button:active{
     height: 2rem;
     box-shadow: 0 4px 6px -1px #303030;
     cursor: pointer;
+}
 
+#flicker:hover{
+    background-color: #cccccc;
+}
+
+#flicker.selected{
+    background-color: #666666;
 }
