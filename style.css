@@ -340,3 +340,17 @@ button:active{
 .hidden{
     display: none;
 }
+
+#flicker{
+    position: absolute;
+    z-index: 5;
+    background-color: whitesmoke;
+    right: 2vw;
+    top: 2vh;
+    padding: 1rem;
+    border-radius: 2rem;
+    height: 2rem;
+    box-shadow: 0 4px 6px -1px #303030;
+    cursor: pointer;
+
+}
