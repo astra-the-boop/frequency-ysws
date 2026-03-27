@@ -4,25 +4,37 @@ const shopItems:Record<string, any> =
             {
                 "Price":"TBA",
                 "Description":"gotta collect 'em all!",
-                "image":"/assets/shop-items/orpheus-skateboarding-PCB.png"
+                "image":"./assets/shop-items/orpheus-skateboarding-PCB.png"
             },
         "Arduino Nano":
             {
                 "Price":"TBA",
                 "Description":"a microcontroller half the size of your palm",
-                "image":"/assets/shop-items/arduino-nano.png",
+                "image":"./assets/shop-items/arduino-nano.jpg",
             },
         "Arduino Uno":
             {
                 "Price":"TBA",
                 "Description":"that's 1 in italian!",
-                "image":"/assets/shop-items/arduino-uno.png",
+                "image":"./assets/shop-items/arduino-uno.jpg",
             },
         "Raspberry Pi Zero 2 W":
             {
                 "Price":"TBA",
                 "Description":"π×0×2=",
-                "image":",
+                "image":"./assets/shop-items/raspberry-pi-zero-2w.webp",
+            },
+        "Pinecil":
+            {
+                "Price":"TBA",
+                "Description":"open source soldering!",
+                "image":"./assets/shop-items/Pinecilv2-1.jpg",
+            },
+        "$30 Hardware Grant":
+            {
+                "Price":"TBA",
+                "Description":"don't see what you want? buy it yourself!",
+                "image": "./assets/shop-items/hcb-dark.png"
             }
     }
 
