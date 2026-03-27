@@ -95,12 +95,25 @@ document.addEventListener('DOMContentLoaded', () => {
         resetSidebarBtns();
         button3.classList.add("highlighted");
     });
-    button4.addEventListener("click", () => {
+    button4.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
         icon.src = "./assets/shop.svg";
-        main2.innerHTML = `<h1>More to come soon!</h1>`;
+        // main2.innerHTML = `<h1>More to come soon!</h1>`
         resetSidebarBtns();
         button4.classList.add("highlighted");
-    });
+        const shopItemsRes = yield fetch("./shop-items.json");
+        const shopItems = yield shopItemsRes.json();
+        let content = ``;
+        for (let i = 0; i < Object.keys(shopItems).length; i++) {
+            const key = Object.keys(shopItems)[i];
+            const item = shopItems[key];
+            content += `
+            <div id="shop${i}">
+                <img src="${item.image}"><h3>${key}</h3><p>${item.Description}</p><p>${item.Price}</p>
+            </div>
+            `;
+        }
+        main2.innerHTML = content;
+    }));
     button5.addEventListener("click", () => {
         icon.src = "./assets/signup.svg";
         main2.innerHTML = `

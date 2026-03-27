@@ -1,43 +1,3 @@
-const shopItems:Record<string, any> =
-    {
-        "Pile of Stickers":
-            {
-                "Price":"TBA",
-                "Description":"gotta collect 'em all!",
-                "image":"./assets/shop-items/orpheus-skateboarding-PCB.png"
-            },
-        "Arduino Nano":
-            {
-                "Price":"TBA",
-                "Description":"a microcontroller half the size of your palm",
-                "image":"./assets/shop-items/arduino-nano.jpg",
-            },
-        "Arduino Uno":
-            {
-                "Price":"TBA",
-                "Description":"that's 1 in italian!",
-                "image":"./assets/shop-items/arduino-uno.jpg",
-            },
-        "Raspberry Pi Zero 2 W":
-            {
-                "Price":"TBA",
-                "Description":"π×0×2=",
-                "image":"./assets/shop-items/raspberry-pi-zero-2w.webp",
-            },
-        "Pinecil":
-            {
-                "Price":"TBA",
-                "Description":"open source soldering!",
-                "image":"./assets/shop-items/Pinecilv2-1.jpg",
-            },
-        "$30 Hardware Grant":
-            {
-                "Price":"TBA",
-                "Description":"don't see what you want? buy it yourself!",
-                "image": "./assets/shop-items/hcb-dark.png"
-            }
-    }
-
 function validateEmail(input:string):boolean{
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(input);
@@ -138,11 +98,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    button4.addEventListener("click", ()=>{
+    button4.addEventListener("click", async ()=>{
         icon.src = "./assets/shop.svg";
-        main2.innerHTML = `<h1>More to come soon!</h1>`
+        // main2.innerHTML = `<h1>More to come soon!</h1>`
         resetSidebarBtns();
         button4.classList.add("highlighted");
+        const shopItemsRes = await fetch("./shop-items.json");
+        const shopItems:Record<string, any> = await shopItemsRes.json();
+        let content:string = ``;
+
+        for(let i = 0; i < Object.keys(shopItems).length; i++){
+            const key = Object.keys(shopItems)[i];
+            const item = shopItems[key];
+            content += `
+            <div id="shop${i}">
+                <img src="${item.image}"><h3>${key}</h3><p>${item.Description}</p><p>${item.Price}</p>
+            </div>
+            `
+        }
+        main2.innerHTML = content;
     });
 
 
