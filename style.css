@@ -361,3 +361,23 @@ button:active{
 #flicker.selected{
     background-color: #666666;
 }
+
+.bwoop{
+    overflow-x: clip;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 3vh;
+}
+
+.shopItemImage{
+    width: 13vw;
+}
+
+.shopItemContainer{
+    border: 2px solid #3c412c;
+    width: 18vw;
+    text-align: center;
+    padding: 2vw 0.5vw;
+}

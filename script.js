@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button3.classList.remove("highlighted");
         button4.classList.remove("highlighted");
         button5.classList.remove("highlighted");
+        main2.classList.remove("bwoop");
     }
     button1.addEventListener("click", () => {
         location.reload();
@@ -99,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.src = "./assets/shop.svg";
         // main2.innerHTML = `<h1>More to come soon!</h1>`
         resetSidebarBtns();
+        main2.classList.add("bwoop");
         button4.classList.add("highlighted");
         const shopItemsRes = yield fetch("./shop-items.json");
         const shopItems = yield shopItemsRes.json();
@@ -107,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = Object.keys(shopItems)[i];
             const item = shopItems[key];
             content += `
-            <div id="shop${i}">
-                <img src="${item.image}"><h3>${key}</h3><p>${item.Description}</p><p>${item.Price}</p>
+            <div id="shop${i}" class="shopItemContainer">
+                <img src="${item.image}" class="shopItemImage"><h3>${key}</h3><p>${item.Description}</p><p>${item.Price}</p>
             </div>
             `;
         }
