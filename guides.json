@@ -1,0 +1,17 @@
+{
+  "Arduino Quick Start Guide":
+        {
+          "weblink": "#",
+          "presentationlink": "#"
+        },
+  "Raspberry Pi Quick Start Guide":
+        {
+         "weblink": "#",
+          "presentationlink": "#"
+        },
+  "Arduino LoRa Guide":
+        {
+          "weblink": "#",
+          "presentationlink": "#"
+        }
+}
