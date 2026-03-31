@@ -1,17 +1,17 @@
 {
   "Arduino Quick Start Guide":
         {
-          "weblink": "#",
-          "presentationlink": "#"
+          "weblink": "https://frequency-demo.astr.ac",
+          "presentationlink": "https://frequency-demo.astr.ac"
         },
   "Raspberry Pi Quick Start Guide":
         {
-         "weblink": "#",
-          "presentationlink": "#"
+         "weblink": "https://frequency-demo.astr.ac",
+          "presentationlink": "https://frequency-demo.astr.ac"
         },
   "Arduino LoRa Guide":
         {
-          "weblink": "#",
-          "presentationlink": "#"
+          "weblink": "https://frequency-demo.astr.ac",
+          "presentationlink": "https://frequency-demo.astr.ac"
         }
 }

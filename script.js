@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button4.classList.remove("highlighted");
         button5.classList.remove("highlighted");
         main2.classList.remove("bwoop");
+        main2.classList.remove("bwep");
     }
     button1.addEventListener("click", () => {
         location.reload();
@@ -94,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.src = "./assets/guides.svg";
         // main2.innerHTML = `<h1>More to come soon!</h1>`;
         resetSidebarBtns();
-        main2.classList.add("bwoop");
+        main2.classList.add("bwep");
         button3.classList.add("highlighted");
         const guidesRes = yield fetch("./guides.json");
         const guides = yield guidesRes.json();
@@ -104,7 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const guide = guides[key];
             content += `
             <div id="guide${i}" class="guideContainer">
-                <p>${key}<a href="${guide.weblink}">weblink</a><a href="${guide.presentationlink}">presentation link</a></p>
+                <h1>${key}</h1>
+                <div style="display: flex; gap: 1vw;">
+                    <button onclick="window.open('${guide.weblink}', '_blank')" style="width: 50%">Guide</button> <button onclick="window.open('${guide.presentationlink}', 'blank')" style="width: 50%">Presentation for Clubs</button>
+                </div>
             </div>
             `;
         }
