@@ -91,11 +91,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    button3.addEventListener("click", ()=>{
+    button3.addEventListener("click", async () => {
         icon.src = "./assets/guides.svg";
-        main2.innerHTML = `<h1>More to come soon!</h1>`;
+        // main2.innerHTML = `<h1>More to come soon!</h1>`;
         resetSidebarBtns();
+        main2.classList.add("bwoop");
         button3.classList.add("highlighted");
+        const guidesRes = await fetch("./guides.json");
+        const guides: Record<string, any> = await guidesRes.json();
+        let content:string = ``;
+
+        for(let i = 0; i<Object.keys(guides).length;i++){
+            const key = Object.keys(guides)[i];
+            const guide = guides[key];
+            content += `
+            <div id="guide${i}" class="guideContainer">
+                <p>${key}<a href="${guide.weblink}">weblink</a><a href="${guide.presentationlink}">presentation link</a></p>
+            </div>
+            `
+        }
+
+        main2.innerHTML = content;
     });
 
 
